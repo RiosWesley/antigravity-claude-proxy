@@ -91,8 +91,8 @@
             <div class="h-4 w-px bg-space-border"></div>
 
             <!-- Refresh Button -->
-            <button class="btn btn-ghost btn-xs btn-square text-gray-400 hover:text-white hover:bg-white/5"
-                @click="fetchData" :disabled="loading" :title="$store.global.t('refreshData')">
+            <button type="button" class="btn btn-ghost btn-xs btn-square text-gray-400 hover:text-white hover:bg-white/5"
+                @click="fetchData" :disabled="loading" :title="$store.global.t('refreshData')" aria-label="Refresh data">
                 <svg class="w-4 h-4" :class="{'animate-spin': loading}" fill="none" stroke="currentColor"
                     viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -171,15 +171,15 @@
             <!-- Footer Info -->
             <div class="mt-auto px-6 text-[10px] text-gray-700 font-mono">
                 <div class="flex justify-between">
-                    <span>V 1.0.0</span>
-                    <a href="https://github.com/badri-s2001/antigravity-claude-proxy" target="_blank"
+                    <span x-text="'V ' + $store.global.version">V 1.0.0</span>
+                    <a href="https://github.com/badri-s2001/antigravity-claude-proxy" target="_blank" rel="noopener noreferrer"
                         class="hover:text-neon-purple transition-colors">GitHub</a>
                 </div>
             </div>
         </div>
 
         <!-- Main Content -->
-        <div class="flex-1 overflow-auto bg-space-950 relative custom-scrollbar" style="scrollbar-gutter: stable;">
+        <div class="flex-1 overflow-auto bg-space-950 relative custom-scrollbar">
 
             <!-- Views Container -->
             <!-- Dashboard -->
@@ -257,12 +257,12 @@
 
             <div class="modal-action mt-6">
                 <form method="dialog">
-                    <button class="btn btn-ghost hover:bg-white/10" x-text="$store.global.t('close')">Close</button>
+                    <button type="button" class="btn btn-ghost hover:bg-white/10" x-text="$store.global.t('close')">Close</button>
                 </form>
             </div>
         </div>
         <form method="dialog" class="modal-backdrop">
-            <button x-text="$store.global.t('close')">close</button>
+            <button type="button" x-text="$store.global.t('close')">close</button>
         </form>
     </dialog>
 

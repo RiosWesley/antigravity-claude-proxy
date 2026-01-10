@@ -149,7 +149,7 @@ window.DashboardCharts.updateCharts = function (component) {
 
   // Safety checks
   if (!canvas) {
-    console.warn("quotaChart canvas not found");
+    console.debug("quotaChart canvas not found");
     return;
   }
   if (typeof Chart === "undefined") {
@@ -157,7 +157,7 @@ window.DashboardCharts.updateCharts = function (component) {
     return;
   }
   if (!isCanvasReady(canvas)) {
-    console.warn("quotaChart canvas not ready, skipping update");
+    console.debug("quotaChart canvas not ready, skipping update");
     return;
   }
 

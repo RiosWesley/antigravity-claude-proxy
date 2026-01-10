@@ -63,6 +63,10 @@
 }
 
 /* Custom Scrollbar */
+.custom-scrollbar {
+  scrollbar-gutter: stable;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -259,6 +263,7 @@
         rgba(15, 15, 17, 0.75) 0%,
         rgba(18, 18, 20, 0.70) 100%
     );
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     box-shadow:
         0 0 0 1px rgba(255, 255, 255, 0.02) inset,

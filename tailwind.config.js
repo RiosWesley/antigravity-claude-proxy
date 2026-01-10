@@ -1,9 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./public/**/*.{html,js}",
-    "./public/views/**/*.html",
-    "./public/js/**/*.js"
+    "./public/**/*.{html,js}"  // Simplified: already covers all subdirectories
   ],
   darkMode: 'class',
   theme: {
@@ -37,16 +35,17 @@ export default {
   daisyui: {
     themes: [{
       antigravity: {
-        "primary": "var(--color-neon-purple)",
-        "secondary": "var(--color-neon-green)",
-        "accent": "var(--color-neon-cyan)",
-        "neutral": "var(--color-space-800)",
-        "base-100": "var(--color-space-950)",
-        "info": "var(--color-neon-cyan)",
-        "success": "var(--color-neon-green)",
-        "warning": "var(--color-neon-yellow)",
-        "error": "var(--color-neon-red)",
+        "primary": "#a855f7",    // neon-purple
+        "secondary": "#22c55e",  // neon-green
+        "accent": "#06b6d4",     // neon-cyan
+        "neutral": "#18181b",    // space-800
+        "base-100": "#09090b",   // space-950
+        "info": "#06b6d4",       // neon-cyan
+        "success": "#22c55e",    // neon-green
+        "warning": "#eab308",    // neon-yellow
+        "error": "#ef4444",      // neon-red
       }
-    }]
+    }],
+    logs: false  // Disable console logs in production
   }
 }
